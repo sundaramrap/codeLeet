@@ -1,0 +1,17 @@
+/*
+ * @lc app=leetcode id=48 lang=javascript
+ *
+ * [48] Rotate Image
+ */
+
+// @lc code=start
+/**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+var rotate = function (matrix) {
+  //transpose the matrix and then swap the matrix
+  let n = matrix.length;
+  let m = matrix[0].length;
+};
+// @lc code=end
