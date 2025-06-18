@@ -10,8 +10,18 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 var rotate = function (matrix) {
-  //transpose the matrix and then swap the matrix
   let n = matrix.length;
-  let m = matrix[0].length;
+
+  // Transpose the matrix
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
+    }
+  }
+
+  // Reverse each row
+  for (let i = 0; i < n; i++) {
+    matrix[i].reverse();
+  }
 };
 // @lc code=end
