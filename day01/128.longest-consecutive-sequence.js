@@ -25,5 +25,22 @@ var longestConsecutive = function (nums) {
   }
 
   return Math.max(lngStreak, currStreak);
+
+  ///
+  nums1 = [...nums2];
+  let res = "";
+  let depth = 0;
+
+  for (let ch of s) {
+    if (ch === "(") {
+      if (depth > 0) res += ch;
+      depth++;
+    } else {
+      depth--;
+      if (depth > 0) res += ch;
+    }
+  }
+
+  return res;
 };
 // @lc code=end
