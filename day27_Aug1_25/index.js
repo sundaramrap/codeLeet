@@ -81,3 +81,14 @@ function palindrome(n) {
 
 let palind = palindrome(125);
 console.log(palind);
+
+function cntZero(n, z = 0) {
+  if (n === 0) {
+    return z;
+  }
+
+  return cntZero(Math.floor(n / 10), (z += Math.floor(n % 10) === 0));
+}
+
+let ansCntZ = cntZero(3704);
+console.log(ansCntZ, `: OutPut`);
