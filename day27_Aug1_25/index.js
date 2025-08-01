@@ -74,3 +74,10 @@ function revNum(n, rev = 0) {
 
 let ansRevNum = revNum(342398);
 console.log(ansRevNum);
+
+function palindrome(n) {
+  return revNum(n) === n;
+}
+
+let palind = palindrome(125);
+console.log(palind);
