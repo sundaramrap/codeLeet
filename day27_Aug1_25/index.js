@@ -62,3 +62,15 @@ function sumNo(number) {
 
 let sumAns = sumNo(1342);
 console.log(`LEt the ans :${sumAns}`);
+
+function revNum(n, rev = 0) {
+  let sum;
+  if (n === 0) {
+    return rev;
+  }
+
+  return revNum(Math.floor(n / 10), rev * 10 + Math.floor(n % 10));
+}
+
+let ansRevNum = revNum(342398);
+console.log(ansRevNum);
