@@ -13,3 +13,31 @@ function bitFlip(num) {
 }
 
 console.log(bitFlip(23));
+
+function bitNumber(num) {
+  let ans = 0;
+  const n = num.length;
+
+  for (let i = n - 1; i >= 0; i--) {
+    const bit = parseInt(num[i], 10);
+    ans += bit * Math.pow(2, n - 1 - i);
+  }
+
+  return ans;
+}
+
+console.log(bitNumber("10111"));
+
+function bitNumber(num) {
+  let ans = 0;
+  const n = num.length;
+
+  for (let i = n - 1; i >= 0; i--) {
+    const bit = parseInt(num[i], 10);
+    ans += bit * Math.pow(2, n - 1 - i);
+  }
+
+  return ans;
+}
+
+console.log(bitNumber("10111"));
